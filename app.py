@@ -13,7 +13,7 @@ KEYSTONE_AUTHTOKEN = {
     'project_domain_name': 'default'
 }
 
-app.wsgi_app = app.wsgi_app = auth_token.AuthProtocol(app.wsgi_app, KEYSTONE_AUTHTOKEN)
+app.wsgi_app = auth_token.AuthProtocol(app.wsgi_app, KEYSTONE_AUTHTOKEN)
 
 
 @app.route("/")
